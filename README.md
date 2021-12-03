@@ -1,4 +1,4 @@
-# Goorm_AI 자연어 처리: Week01_Python
+# Week01_Python
 ---
 ## HW01: Python Algorithm 구현
 ### 1. Python 내장함수 만들기
