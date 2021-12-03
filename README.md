@@ -1,4 +1,4 @@
-# Week01_Python
+# Chapter01_Python
 ---
 ## HW01: Python Algorithm 구현
 ### 1. Python 내장함수 만들기
