@@ -22,23 +22,23 @@
 ## HW02: 나만의 데이터셋 만들기
 ### 1. 네이버 영화 리뷰 크롤링
 - Python 표준 라이브러리 csv를 사용
-- 약 1000건의 데이터 수집하기 위하여 'review_list'의 길이가 1001보다 작은 동안 크롤링 수행
-- 수집한 데이터의 'sentence'가 비어있는 경우, 추가하지 않도록 함
-- 'sentence'로 받아온 문장 끝의 공백을 미리 처리
+- 약 1000건의 데이터 수집하기 위하여 `review_list`의 길이가 1001보다 작은 동안 크롤링 수행
+- 수집한 데이터의 `sentence`가 비어있는 경우, 추가하지 않도록 함
+- `sentence`로 받아온 문장 끝의 공백을 미리 처리
 - 크롤링 과정에서 실시간으로 페이지가 갱신되어, 중복된 데이터가 수집되는 것을 방지하기 위하여 한 페이지씩 건너뛰며 크롤링 수행
 
 ### 2. 네이버 영화 데이터 셋 제작
-- 'samples.csv'를 기본 인자로 받아 객체 생성
-- 파일 첫 줄의 header 제거, 'raw_moive_review[0]'이 첫 번째 한줄 평이 나오도록 함
-- Indexing 결과값이 '(str, str, int)' 형태의 튜플로 나오도록 함
-- '__setitem__()'을 재정의하여 "수정 권한이 없습니다." 출력 후, 사용자가 임의로 수정하는 것을 방지
-- Index 값이 전체 데이터의 길이를 넘어가는 경우, 'IndexError'를 발생하도록 처리함
+- `samples.csv`를 기본 인자로 받아 객체 생성
+- 파일 첫 줄의 header 제거, `raw_moive_review[0]`이 첫 번째 한줄 평이 나오도록 함
+- Indexing 결과값이 `(str, str, int)` 형태의 튜플로 나오도록 함
+- `__setitem__()`을 재정의하여 "수정 권한이 없습니다." 출력 후, 사용자가 임의로 수정하는 것을 방지
+- Index 값이 전체 데이터의 길이를 넘어가는 경우, `IndexError`를 발생하도록 처리함
 
 ### 3. 네이버 영화 학습 데이터 셋 제작
-- 'RawMovieReview' 클래스를 상속
-- 'int'타입의 'score_threadhold'를 받아 생성하도록 함
-- Indexing 결과값이 '(str, bool)' 형태의 튜플로 나오도록 함
-- 점수가 'score_threadhold'이상일 경우 'True', 미만이면 'False'
+- `RawMovieReview` 클래스를 상속
+- `int`타입의 `score_threadhold`를 받아 생성하도록 함
+- Indexing 결과값이 `(str, bool)` 형태의 튜플로 나오도록 함
+- 점수가 `score_threadhold`이상일 경우 `True`, 미만이면 `False`
 
 ### 4. Pandas라이브러리를 사용하여 구현
 ---
